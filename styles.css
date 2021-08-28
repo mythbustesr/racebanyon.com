@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(61, 61, 61);
 
 }
 
@@ -17,9 +17,10 @@ p {
 }
 
 img {
-    filter: contrast(1.5) blur(30px) grayscale(100);
-    -webkit-filter: contrast(1.5) blur(30px) grayscale(100);
-    -moz-filter: contrast(1.5) blur(30px) grayscale(100);
+    filter: grayscale(100);
+    -webkit-filter: grayscale(100);
+    -moz-filter: grayscale(100);
+    backdrop-filter: difference();
 
 }
 
@@ -106,4 +107,13 @@ iframe {
     height:100%;
  
 
+  }
+
+  .blur {
+    -webkit-animation: blur 200s infinite;
+  }
+  
+  @-webkit-keyframes blur {
+    0%, 100%  { -webkit-filter: blur(10px); }
+    50% { -webkit-filter: blur(200px); }
   }
